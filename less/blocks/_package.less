@@ -1,0 +1,146 @@
+.package {
+  text-align: center;
+  border-radius: 7px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 40px 0px rgba(99, 117, 138, 0.3);
+
+  padding-top: 34px;
+  padding-bottom: 47px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  margin-bottom: 40px;
+
+  &.last {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+  .package {
+    background-color: none;
+    box-shadow: none;
+    border-radius: none;
+  }
+  
+  .package_one {
+    width: 360px;
+    height: 419px;
+    position: relative;
+  }
+
+  .package_two {
+    width: 360px;
+    height: 419px;
+    position: relative;
+  }
+
+  .package_three {
+    width: 360px;
+    height: 419px;
+    position: relative;
+  }
+
+  .package__type--back_card {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 7px;
+  }
+  
+  .front {
+    background-color: #fff;
+    box-shadow: 0px 10px 40px 0px rgba(99, 117, 138, 0.3);
+    padding-top: 34px;
+  }
+  
+  .back {
+    background-color: rgb(186, 217, 247);
+    transform: rotateY(180deg);
+    box-shadow: 0px 10px 40px 0px rgba(99, 117, 138, 0.3);
+  }
+  
+  .package_one:hover .front { transform: rotateY(180deg);}
+  .package_one:hover .back {transform: rotateY(360deg);}
+
+  .package_two:hover .front { transform: rotateY(180deg);}
+  .package_two:hover .back {transform: rotateY(360deg);}
+
+  .package_three:hover .front { transform: rotateY(180deg);}
+  .package_three:hover .back {transform: rotateY(360deg);}
+}
+
+.package__type {
+  font-size: 12px;
+  color: #242526;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.package__price {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  color: #242526;
+  margin-bottom: 24px;
+
+  &:after {
+    content: "c";
+    font-family: 'als_rublregular';
+  }
+  
+}
+
+.package__period {
+  color: #242526;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+.package__benefits {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 40px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 10px;
+      
+      &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-image: url(../img/icons/ok-icon.png);
+        background-repeat: no-repeat;
+        background-position: left 2px;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}
