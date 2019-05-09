@@ -179,6 +179,11 @@ p {
     margin-bottom: 0;
   }
 }
+@media (min-width: 320px) {
+  .package__type--back_card {
+    font-size: 0;
+  }
+}
 @media (min-width: 1200px) {
   .package {
     background-color: none;
